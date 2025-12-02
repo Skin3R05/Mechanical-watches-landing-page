@@ -7,34 +7,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Header / Navigation -->
-     <header class="navbar">
+    <header class="navbar">
         <div class="logo">TimeCraft</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#models">Models</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
+
+        <!-- note: .nav-links used by toggleMenu() in script.js -->
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#models">Models</a>
+            <a href="#about">About</a>
         </nav>
+
+        <div class="hamburger" onclick="toggleMenu()" aria-label="Open menu" role="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
      </header>
 
     <!-- Hero Section -->
      <section id="home" class="hero">
-        <div class="hero-text">
+        <div class="hero-text fade-in">
             <h1>Timeless Mechanical Watches</h1>
-            <p>Crafted with precision. Designed with passion. built to last generations.</p>
+            <p>Crafted with precision. Designed with passion. Built to last generations.</p>
             <a href="#models" class="btn">Explore Models</a>
         </div>
-        <div class="hero-image float">
+        <div class="hero-image float fade-in">
             <img src="./assets/mechanical-watch.jpg" alt="Mechanical Watch">
         </div>
      </section>
 
     <!-- Features Section -->
      <section id="features" class="features">
-        <h2>Why Choose Mechanical Watches?</h2>
+        <h2>Why Mechanical Watches?</h2>
 
         <div class="feature-grid">
 
@@ -68,24 +75,24 @@
      <section id="models" class="models">
         <h2>Our Signature Models</h2>
 
-        <div class="model-grid">
+        <div class="models-grid">
 
             <div class="model-card fade-in">
                 <img src="./assets/classic-heritage.jpg" alt="Classic Watch">
                 <h3>Classic Heritage</h3>
-                <p>A timeless design feturing a hand-wound movement and sapphire crystal glass.</p>
+                <p>A timeless design featuring a hand-wound movement and sapphire crystal glass.</p>
                 <span class="price">$299</span>
             </div>
 
             <div class="model-card fade-in">
-                <img src="./assets/sport-chronograph.jpg" alt="Classic Watch">
+                <img src="./assets/sport-chronograph.jpg" alt="Sport Chronograph">
                 <h3>Sport Chronograph</h3>
                 <p>Bold, durable, and engineered for precision even in the toughest conditions.</p>
                 <span class="price">$350</span>
             </div>
 
             <div class="model-card fade-in">
-                <img src="./assets/royal-automatic.jpg" alt="Classic Watch">
+                <img src="./assets/royal-automatic.jpg" alt="Royal Automatic">
                 <h3>Royal Automatic</h3>
                 <p>Premium materials and a 21-jewel automatic movement for ultimate refinement.</p>
                 <span class="price">$499</span>
@@ -96,7 +103,7 @@
     <!-- About Section -->
      <section id="about" class="about">
         <div class="about-content">
-            <div class="about-text">
+            <div class="about-text slide-in-left fade-in">
                 <h2>The Art of Mechanical Craftsmanship</h2>
                 <p>
                     For generations, mechanical watches have stood as a symbol of precision, tradition,
@@ -113,11 +120,12 @@
                 <a href="#models" class="btn about-btn">Explore Our Collection</a>
             </div>
 
-            <div class="about-image">
+            <div class="about-image slide-in-right fade-in">
                 <img src="./assets/logo.jpg" alt="Craftsmanship">
             </div>
         </div>
      </section>
+
      <script src="./script.js"></script>
 </body>
 </html>
